@@ -1,7 +1,5 @@
-import Headline from "@/components/Headline"
-import Links from "@/components/Links";
-
-console.log("Server-side log: Footer =", Headline);
+import Headline from '@/components/Headline';
+import Links from '@/components/Links';
 
 export default function HomePage() {
   return (

@@ -18,11 +18,14 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@/*": ["./*"]
+      "@/components/*": ["components/*"], // components へのエイリアス
+      "@/styles/*": ["styles/*"], // styles へのエイリアス
+      "@/lib/*": ["lib/*"], // lib へのエイリアス（必要なら）
+      "@/app/*": ["app/*"] // app ディレクトリへのエイリアス
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "src/**/*", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
