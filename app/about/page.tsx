@@ -1,3 +1,5 @@
+import Links from "@/components/Links";
+
 export default function AboutPage() {
   return (
     <div className="m-8 p-8 bg-gray-100 shadow-lg">
@@ -7,6 +9,7 @@ export default function AboutPage() {
         <li>CSS</li>
         <li>JAVA</li>
       </ul>
+      <Links />
     </div>
   );
 }
