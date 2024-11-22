@@ -1,18 +1,27 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export default function ClientButton() {
+  const [count, setCounter] = useState(1);
+
+  useEffect(() => {
+    return () => {};
+  }, []);
+
   const handleClick = useCallback(() => {
-    alert('Hello, world!');
+    setCounter((counter) => counter + 1);
   }, []);
 
   return (
-    <button
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      onClick={handleClick}
-    >
-      Client Button
-    </button>
+    <div>
+      <h2 className="font-bold px-4">{count}</h2>
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        onClick={handleClick}
+      >
+        Count up
+      </button>
+    </div>
   );
 }
