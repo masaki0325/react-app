@@ -6,7 +6,7 @@ import React from 'react';
 
 export default function ClientButton() {
   const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { array, handleAdd, text, setText } = useInputArray();
+  const { text, setText } = useInputArray();
 
   return (
     <div className="flex items-center justify-center py-10 bg-gray-100">
