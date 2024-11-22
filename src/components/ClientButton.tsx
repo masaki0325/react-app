@@ -1,25 +1,12 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCounter } from 'hooks/useCounter';
+import { useInputArray } from 'hooks/useInputArray';
 import React from 'react';
 
 export default function ClientButton() {
-  const [count, setCounter] = useState(1);
-  const [text, setText] = useState('');
-  const [isShow, setIsShow] = useState(false);
-
-  useEffect(() => {
-    console.log('ClientButton mounted');
-    return () => {};
-  }, [count]);
-
-  const handleClick = useCallback(() => {
-    setCounter((counter) => counter + 1);
-  }, []);
-
-  const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => !isShow);
-  }, []);
+  const { count, isShow, handleClick, handleDisplay } = useCounter();
+  const { array, handleAdd, text, setText } = useInputArray();
 
   return (
     <div className="flex items-center justify-center py-10 bg-gray-100">
