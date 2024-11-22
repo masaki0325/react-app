@@ -1,6 +1,7 @@
 import Headline from '@/components/Headline';
 import Links from '@/components/Links';
 import ClientButton from '@/components/ClientButton';
+import Content from '@/components/Content';
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <Headline title="title" page="page" />
       <Links />
       <ClientButton />
+      <Content />
     </div>
   );
 }
